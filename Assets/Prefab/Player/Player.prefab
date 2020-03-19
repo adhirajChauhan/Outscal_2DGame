@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 1.73, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2968661373923979684}
@@ -94,11 +94,10 @@ GameObject:
   - component: {fileID: 2968661373923979684}
   - component: {fileID: 3696175429493565817}
   - component: {fileID: 1097155427}
-  - component: {fileID: 1097155428}
   - component: {fileID: 1097155426}
   - component: {fileID: 3222812672381216964}
   - component: {fileID: 1097155423}
-  - component: {fileID: 4765751718657988855}
+  - component: {fileID: 1748335377}
   m_Layer: 13
   m_Name: Player
   m_TagString: Untagged
@@ -158,7 +157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c4d7d6470acd7bf45971042161c6e018, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -196,21 +195,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54432404, y: 2.0720925}
   m_EdgeRadius: 0
---- !u!114 &1097155428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6814745714278559615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae67a2bd5b5c514598101e477f71e02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1097155423, guid: a8209b19fe86d1a4397de490f3aa17fe, type: 3}
-  speed: 5
-  jump: 8
 --- !u!50 &1097155426
 Rigidbody2D:
   serializedVersion: 4
@@ -222,8 +206,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 2.2557795
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -277,7 +261,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4765751718657988855
+--- !u!114 &1748335377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae67a2bd5b5c514598101e477f71e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreController: {fileID: 0}
+  gameOverController: {fileID: 0}
   animator: {fileID: 1097155423}
-  speed: 0
-  jump: 0
+  speed: 7
+  jump: 70

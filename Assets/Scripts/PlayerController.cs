@@ -1,9 +1,13 @@
-﻿ using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public ScoreController scoreController;
+    public GameOverController gameOverController;
     public Animator animator;
     public float speed;
     public float jump;
@@ -15,6 +19,15 @@ public class PlayerController : MonoBehaviour
         rb2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
+    public void KillPlayer()
+    {
+        Debug.Log("Player killed by enemy");
+        gameOverController.PlayerDied();
+        this.enabled = false;
+    }
+
+
+
     void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -22,6 +35,12 @@ public class PlayerController : MonoBehaviour
         moveCharacter(horizontal, vertical);
         playMovementAnimation(horizontal, vertical);
 
+    }
+
+    public void PickUpKey()
+    {
+        Debug.Log("Player Picked up the key");
+        scoreController.IncreaseScore(5);
     }
 
     private void moveCharacter(float horizontal, float vertical)
