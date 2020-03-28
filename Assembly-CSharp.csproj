@@ -96,7 +96,10 @@
     <Compile Include="Assets\Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\GameOverController.cs" />
     <Compile Include="Assets\Scripts\KeyController.cs" />
-    <Compile Include="Assets\Scripts\LevelOverController.cs" />
+    <Compile Include="Assets\Scripts\Level\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Level\LevelOverController.cs" />
+    <Compile Include="Assets\Scripts\Level\Levelstatus.cs" />
     <Compile Include="Assets\Scripts\LobbyController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScoreController.cs" />
